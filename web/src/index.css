@@ -1,0 +1,52 @@
+/**
+ * START --- SETUP TAILWINDCSS EDIT
+ *
+ * `yarn rw setup ui tailwindcss` placed these directives here
+ * to inject Tailwind's styles into your CSS.
+ * For more information, see: https://tailwindcss.com/docs/installation
+ */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/**
+ * END --- SETUP TAILWINDCSS EDIT
+ */
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&family=Martian+Mono:wght@400;500;600;700&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  body {
+    @apply bg-chalk-100 font-read text-cyanotype-800 antialiased;
+  }
+}
+
+@layer utilities {
+  /* Width contrast: statements at expanded width, register at condensed. */
+  .stretch-display {
+    font-stretch: 118%;
+  }
+  .stretch-display-max {
+    font-stretch: 125%;
+  }
+  .stretch-mono {
+    font-stretch: 87.5%;
+  }
+}
+
+section[id] {
+  scroll-margin-top: 5rem;
+}
+
+/* Sulphur marks selection and focus — an Okwe signature. */
+::selection {
+  background-color: #eedd6a;
+  color: #05161f;
+}
+
+:focus-visible {
+  outline: 2px solid #e3cb2a;
+  outline-offset: 0;
+}
